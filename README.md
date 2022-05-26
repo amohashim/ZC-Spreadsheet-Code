@@ -17,4 +17,4 @@ There are two functions: scan.group() and scan.numbers(). The only meaningful di
    - The values in this column will make up the values in the dataframe 
 
 # Warning
-I barely know how to code, and R is weird about merging columns, so the resulting dataframe will look weird. I would usually clean it up after exporting the frame to excel. There's [a python version of this] (https://github.com/amohashim/sort_spreadsheet) that returns normal looking versions of the dataframe, but I can't figure out export the result to excel. 
+I barely know how to code, and R is weird about merging columns, so the resulting dataframe will look weird. I would usually clean it up after exporting the frame to excel. There's [a python version of this](https://github.com/amohashim/sort_spreadsheet) that returns normal looking versions of the dataframe, but I can't figure out export the result to excel. 
