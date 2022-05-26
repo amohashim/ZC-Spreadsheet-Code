@@ -1,1 +1,36 @@
+# Purpose
+Once you've sorted the spreadsheet, you might want to every brand of a specific item. For example, you might want to identify all the brands of pens
+we buy from Staples. Here's a basic layout:
+
+# Code
+
+pens <- df_procurement[df_procurement$StaplesAdvantageItemDescription %like% "Pen", ]
+df_pens <- scan.groups(as.data.frame(pens),c("Office Supplies"),5,3)
+df_pens <- as.data.frame(df_pens)
+df_pens <- df_pens[-c(1,4,7,18,18,35,52,56,57,64,65,75), ]
+df_pens <- as.data.frame(df_pens)
+
+
+# Breaking it down
+
+#### Create a dataframe with all the instances of items in the "item decription" containing the string "Pen"
+
+pens <- df_procurement[df_procurement$StaplesAdvantageItemDescription %like% "Pen", ]
+
+#### Scanning the new dataframe to find unique values, then coercing the resulting list into a dataframe. 
+df_pens <- scan.groups(as.data.frame(pens),c("Office Supplies"),5,3)
+df_pens <- as.data.frame(df_pens)
+
+#### I manually went through the resulting dataframe and removed rows where the %like% function captured items that contained 
+the string "Pen" that weren't actually pens (like pencils), then coereced the resulting list into a dataframe
+df_pens <- df_pens[-c(1,4,7,18,18,35,52,56,57,64,65,75), ]
+df_pens <- as.data.frame(df_pens)
+
+
+
+
+
+
+
+
 
