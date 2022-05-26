@@ -1,0 +1,19 @@
+scan.groups<-function(spreadsheet,categorization_vector,categories_column_position,subcategories_column_position) {
+frame <- as.data.frame(NULL)
+for (i in 1:length(categorization_vector)) {
+    identifier <- categorization_vector[i]
+    vector<-c(NULL)
+    for (r in 1:nrow(spreadsheet)) {
+        objective <- unlist(spreadsheet[r,categories_column_position])
+        if (identifier == objective) {
+            vector<-unlist(append(vector,spreadsheet[r,subcategories_column_position]))
+            vector<-unique(vector)
+        }
+    }
+    frame<-merge(frame,vector,by=0,all=T,no.dups=F)
+    drops<-c("Row.names")
+    frame<-frame[ , !(names(frame) %in% drops)]
+}
+names(frame)<-categorization_vector
+print(frame)
+}
