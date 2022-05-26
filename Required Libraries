@@ -1,0 +1,11 @@
+# Note:
+Not sure how many of these you actually need for the sorting process.
+
+library("tidyverse")
+library("knitr")
+library("rmarkdown")
+library("lubridate")
+library("readxl")
+library("writexl")
+library("data.table")
+Library("stringr")
