@@ -1,0 +1,22 @@
+import pandas as pd
+import numpy as np
+
+def scan.groups(spreadsheet,categorization_vector,categories_column_position,subcategories_column_position):
+  frame = pd.DataFrame()
+  n_columns = len(categorization_vector)
+  n_rows = spreadsheet.shape[0]
+  identifier_column = np.array(spreadsheet.iloc[:,categories_column_position])
+  solution_column = np.array(spreadsheet.iloc[:,subcategories_column_position])
+  for i in range(n_columns):
+    identifier = categorization_vector[i]
+    vector = np.empty(0)
+    for r in range(n_rows):
+      objective = identifier_column[r]
+      solution = solution_column[r]
+      if identifier == objective:
+        vector = np.append(vector,solution)
+        vector = pd.DataFrame(np.unique(vector)) 
+    frame = pd.concat([frame,vector],axis = 1)
+  frame.set_axis(categorization_vector,axis=1,inplace = True)
+  return(frame)
+  
