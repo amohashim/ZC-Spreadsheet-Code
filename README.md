@@ -4,7 +4,7 @@ A function, written in R, designed to scan spreadsheets and sort the values in o
 # Purpose
 This function returns a dataframe where the column names are the unique values in the spreadsheet's "categories_column" (specified in the function), and the values in each column are the unique values in the spreadsheet's "subcategories_column" (specified in the function) that coorespond to values in the spreadsheet's "categories_column". 
 
-There are two functions
+There are two functions: scan.group() and scan.numbers(). The only meaningful difference between them is that scan.group() returns unique values in the subcategories column while scan.numbers() returns all targeted values regardless of reepition. 
 
 # Arguments
  1. "spreadsheet" = a dataframe containing data to be sorted. 
