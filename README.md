@@ -1,5 +1,5 @@
 # ZC Spreadsheet Sort
-A function, written in R, designed to scan spreadsheets and sort the values in one specified column by the values in another specified column. Intended to support the Zilkha Center Procurement Project.
+A function, written in R and Python, designed to scan spreadsheets and sort the values in one specified column by the values in another specified column. Intended to support the Zilkha Center Procurement Project.
 
 # Purpose
 This function returns a dataframe where the column names are the unique values in the spreadsheet's "categories_column" (specified in the function), and the values in each column are the unique values in the spreadsheet's "subcategories_column" (specified in the function) that coorespond to values in the spreadsheet's "categories_column". 
@@ -17,4 +17,4 @@ There are two functions: scan.group() and scan.numbers(). The only meaningful di
    - The values in this column will make up the values in the dataframe 
 
 # Warning
-I barely know how to code, and R is weird about merging columns, so the resulting dataframe will look weird. I would usually clean it up after exporting the frame to excel. There's [a python version of this](https://github.com/amohashim/sort_spreadsheet) that returns normal looking versions of the dataframe, but I can't figure out export the result to excel. 
+I barely know how to code, and R is weird about merging columns, so the resulting dataframe will look weird. I would usually clean it up after exporting the frame to excel. There's [a python version of this](https://github.com/amohashim/sort_spreadsheet) that returns normal looking versions of the dataframe, and it's working now.  
