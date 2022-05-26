@@ -1,4 +1,4 @@
-# ZC-Spreadsheet-Code
+# ZC Spreadsheet Sort
 A function, written in R, designed to scan spreadsheets and sort the values in one specified column by the values in another specified column
 
 # Purpose
