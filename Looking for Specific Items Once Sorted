@@ -1,6 +1,6 @@
 # Purpose
 Once you've sorted the spreadsheet, you might want to every brand of a specific item. For example, you might want to identify all the brands of pens
-we buy from Staples. Here's a basic layout:
+we buy from Staples. Here's a basic layout, written in R:
 
 # Code
 
